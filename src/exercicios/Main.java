@@ -1,9 +1,8 @@
 package exercicios;
 
-public class AppPessoa {
+public class Main {
     public static void main(String[] args) {
-        Pessoa pessoa;
-        pessoa = new Pessoa();
+        Pessoa pessoa = new Pessoa();
 
         pessoa.id = "10";
         pessoa.nome = "Evelyn Cristini Oliveira";

@@ -2,6 +2,7 @@ package exercicios;
 
 public class Main {
     public static void main(String[] args) {
+
         Pessoa pessoa = new Pessoa();
 
         pessoa.id = "10";
@@ -10,10 +11,13 @@ public class Main {
         pessoa.altura = 1.54;
         pessoa.peso = 63.5;
 
+        Pessoa pessoa2 = new Pessoa(pessoa.getId(), pessoa.getNome(), pessoa.getIdade());
+
         System.out.println("O Id é " + pessoa.id);
         System.out.println("O nome é " + pessoa.nome);
         System.out.println("A idade é " + pessoa.idade);
         System.out.println("A altura é " + pessoa.altura);
         System.out.println("O peso é " + pessoa.peso);
+
     }
 }

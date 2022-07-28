@@ -6,6 +6,28 @@ public class Pessoa {
         public int idade;
         double altura, peso;
 
+        public boolean ehMaiorIdade(int idade) {
+              if (idade >= 18) { return true; } return false;
+        }
+        public double calcularIMC(double peso, double altura) {
+                double imc = peso / (altura * altura);
+
+                if (imc < 20.0 && ehMaiorIdade(idade)) return -1 ;
+                else if (imc > 20.0 && imc <= 25.0 && ehMaiorIdade(idade)) return 0 ;
+                else if (imc > 25.0 && ehMaiorIdade(idade)) return 1 ;
+
+                return imc;
+        }
+
+        @Override
+        public String toString() {
+                return "O Id é: " + id +
+                        "\nO meu nome é: " + nome +
+                        "\nA minha idade é: " + idade +
+                        " anos \nA altura é: " + altura +
+                        " metros \nO peso é: " + peso + " kg";
+        };
+
         public Pessoa(){}
 
         public Pessoa(String id, String nome, int idade) {

@@ -5,19 +5,17 @@ public class Main {
 
         Pessoa pessoa = new Pessoa();
 
-        pessoa.id = "10";
+        pessoa.id = "1";
         pessoa.nome = "Evelyn Cristini Oliveira";
-        pessoa.idade = 25;
-        pessoa.altura = 1.54;
-        pessoa.peso = 63.5;
+        pessoa.idade = 18;
+        pessoa.altura = 1.57;
+        pessoa.peso = 63.8;
 
         Pessoa pessoa2 = new Pessoa(pessoa.getId(), pessoa.getNome(), pessoa.getIdade());
 
-        System.out.println("O Id é " + pessoa.id);
-        System.out.println("O nome é " + pessoa.nome);
-        System.out.println("A idade é " + pessoa.idade);
-        System.out.println("A altura é " + pessoa.altura);
-        System.out.println("O peso é " + pessoa.peso);
+        System.out.println(pessoa);
+        System.out.println("Você é maior de idade: " + pessoa.ehMaiorIdade(pessoa.idade));
+        System.out.println("Minha faixa do IMC corresponde a: " + pessoa.calcularIMC(pessoa.peso, pessoa.altura));
 
     }
 }

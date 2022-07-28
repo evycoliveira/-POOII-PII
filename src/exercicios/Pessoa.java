@@ -9,12 +9,12 @@ public class Pessoa {
         public boolean ehMaiorIdade(int idade) {
               if (idade >= 18) { return true; } return false;
         }
-        public double calcularIMC(double peso, double altura) {
+        public double calcularIMC() {
                 double imc = peso / (altura * altura);
 
-                if (imc < 20.0 && ehMaiorIdade(idade)) return -1 ;
-                else if (imc > 20.0 && imc <= 25.0 && ehMaiorIdade(idade)) return 0 ;
-                else if (imc > 25.0 && ehMaiorIdade(idade)) return 1 ;
+                if (imc < 20.0 && ehMaiorIdade(idade)) return -1;
+                else if (imc > 20.0 && imc <= 25.0 && ehMaiorIdade(idade)) return 0;
+                else if (imc > 25.0 && ehMaiorIdade(idade)) return -1;
 
                 return imc;
         }
